@@ -4,10 +4,9 @@
 
 
 
-
 /*************** GOOGLE ANALYTICS ***********/
 /*************** REPLACE WITH YOUR OWN UA NUMBER ***********/
-window.onload = function () { "use strict"; gaSSDSLoad(""); }; //load after page onload
+window.onload = function () { "use strict"; gaSSDSLoad("UA-12546731-1"); }; //load after page onload
 /*************** REPLACE WITH YOUR OWN UA NUMBER ***********/
 
 
