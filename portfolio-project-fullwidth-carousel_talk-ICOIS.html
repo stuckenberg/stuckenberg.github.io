@@ -1,0 +1,143 @@
+<div id="portfolioSheetWrapper">
+
+    <header id="project">
+        <div class="container">
+         <div class="row">
+          <div class="col-md-10">
+            <h1>Presentation at the International Conference on Outsourcing of Information Services (ICOIS'2013)</h1>
+            <p class="date">In talks / June 10, 2013</p>
+        </div>
+        <div class="col-md-2">
+            <a href="javascript:$.pageslide.close()" class="btn pull-right"><i class="icon-cancel-outline"></i>Close</a>
+
+        </div>
+    </div>
+</div>
+</header>
+
+
+<section class="content">
+
+    <section class="mb15">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="portfolio-carousel" class="owl-carousel">
+                        <img src="images/portfolio/icois2013/slide1.png" alt="slides" class="img-responsive"/>
+                        <img src="images/portfolio/icois2013/slide2.png" alt="slides" class="img-responsive"/>
+                        <img src="images/portfolio/icois2013/slide3.png" alt="slides" class="img-responsive"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Conference presentation</h2>
+                    <p>Organizational Integration in Developing and Operating .Software-as-a-Service: A Qualitative Perspective by Sebastian Stuckenberg, Thomas Kude and Armin Heinzl</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Conference</h2>
+                    <p>International Conference on Outsourcing of Information Services (ICOIS'2013)</p>
+                    <h2>Location</h2>
+                    <p>Mannheim, Germany</p>
+                </div>
+                <div class="col-md-4">
+                    <div id="shareme" data-url="http://www.stuckenberg.de" data-text="ICOIS 2013 Presentation"> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+    <!-- call to action -->
+    
+	<!--
+	<section class="slice mb15">
+        <div class="container">
+          <div class="row">
+             <div class="col-md-12">
+                <div class="ctaBox ">
+                    <div class="container">
+                      <div class="row">
+                       <div class="col-md-8">
+                          <h1>
+                            <strong>Ashley Bootstrap Website Template</strong> is perfect for simple and clean presentation of your business.
+                        </h1>
+
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn btn-lg" title="" href="#" target="blank">
+                            <i class="icon-flash"></i> purchase now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section> 
+</section>
+</-->
+<!-- call to action -->     
+
+
+<footer>
+    <div class="container">
+    	<div class="row">
+            <div class="col-md-2 col-md-offset-10">
+                <a href="javascript:$.pageslide.close()" class="btn pull-right"><i class="icon-cancel-outline"></i>Close</a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<script type="text/javascript">
+   /*
+    |--------------------------------------------------------------------------
+    | OWL CAROUSEL
+    |--------------------------------------------------------------------------
+    */
+    if($('#portfolio-carousel').length){ 
+        $("#portfolio-carousel").owlCarousel(
+            {items : 1, navigation:true,navigationText:false}
+            );
+    }
+    
+
+    /*
+    |--------------------------------------------------------------------------
+    | SHARRRE
+    |--------------------------------------------------------------------------
+    */
+    if($('#shareme').length){
+
+        $('#shareme').sharrre({
+
+            share: {
+                googlePlus: true,
+                facebook: true,
+                twitter: true,
+                linkedin: true
+            },
+
+            buttons: {
+                googlePlus: {size: 'tall', annotation:'bubble'},
+                facebook: {layout: 'box_count'},
+                twitter: {count: 'vertical'},
+                linkedin: {counter: 'top'}
+            },
+
+            enableHover: false,
+            enableCounter: false,
+            enableTracking: true,
+          //url:'document.location.href'
+      });
+    } 
+
+    </script>
