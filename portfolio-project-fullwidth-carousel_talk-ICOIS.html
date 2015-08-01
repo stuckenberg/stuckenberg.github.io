@@ -137,11 +137,11 @@
 		function customDataSuccess(data){
 				 var content = "";
 				 for(var i in data["photos"]["photo"]){
-       			 		 var farm = data["photo"][i].farm;
-       					 var server = data["photo"][i].server;
-						 var id = data["photo"][i].id;
-						 var secret = data["photo"][i].secret;
-						 var alt = data["photo"][i].title;
+       			 		 var farm = data["photo"]["photo"][i].farm;
+       					 var server = data["photo"]["photo"][i].server;
+						 var id = data["photo"]["photo"][i].id;
+						 var secret = data["photo"]["photo"][i].secret;
+						 var alt = data["photo"]["photo"][i].title;
 
 						 content += "<img src=\"https://farm" +farm+ ".staticflickr.com/" +server+ "/" +id+ "_" +secret+ "_b.jpg\" alt=\"" +alt+ "\">"
 						 }
