@@ -276,6 +276,12 @@ $(document).ready(function() {
      alert('toto');    
         $("#portfolio-carousel").owlCarousel();
     }
+
+	if($('#portfolio-carousel-flickr').length){ 
+     alert('toto');    
+        $("#portfolio-carousel-flickr").owlCarousel();		
+    }	
+	
     /*
     |--------------------------------------------------------------------------
     | FLEXSLIDER
@@ -1059,20 +1065,119 @@ function initialize(id) {
     "use strict";
     var image = 'images/icon-map.png';
 
-    var overlayTitle = 'Agencies';
+    var overlayTitle = 'Destinations';
 
     var locations = [
         //point number 1
-        ['Madison Square Garden', '4 Pennsylvania Plaza, New York, NY'],
+        ['My second home', 'Hong Kong'],
 
         //point number 2
-        ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
+        ['Home', 'Mannheim', 49.4840513,8.4756606],
+		
+		//point number 3
+        ['Study Abroad in 2007', 'Adelaide', -34.9270988,138.5897482],
+		
+		//point number 4
+        ['Californa Road Trip 2013', 'San Francisco', 37.763566,-122.4123709],
+		
+		//point number 5
+        ['...', 'Brisbane'],
+		
+		//point number 6
+        ['...', 'Sydney'],
+		
+		//point number 7
+        ['...', 'Seoul'],
+		
+		//point number 8
+        ['...', 'Osaka'],
+		
+		//point number 9
+        ['...', 'London'],
+		
+		//point number 10
+        ['...', 'Kyotho'],
+		
+		//point number 11
+        ['...', 'Shanghai'],
+		
+		//point number 12
+        ['...', 'Beijing'],
+		
+		//point number 13
+        ['...', 'Ho Chi Min City'],
 
-        //point number 3 
-        ['Located in the Midwestern United States', 'Kansas'],
+		//point number 14
+        ['...', 'Bangkok'],
 
-        //point number 4
-        ['I\'ll definitly be there one day', 'Chicago', 41.8781136, -87.62979819999998] 
+		//point number 15
+        ['...', 'Xian', 34.2640711,108.9573268],
+
+		//point number 16
+        ['...', 'Roma', 41.904039,12.5047018],
+
+		//point number 17
+        ['...', 'Kota Kinabalu', 6.0193773,116.0504887],
+
+		//point number 18
+        ['...', 'Budapest',47.4919979,19.0862633],
+
+		//point number 19
+        ['...', 'Lisboa',38.7176287,-9.1409623],
+
+		//point number 20
+        ['...', 'Taipei',25.0525066,121.5340049],
+
+		//point number 21
+        ['...', 'Kaohsiung City', 22.6131778,120.3048102],
+
+		//point number 22
+        ['...', 'Paris', 48.8588589,2.3470599],	
+
+		//point number 23
+        ['...', 'Salzburg', 47.80281,13.05643],	
+
+		//point number 24
+        ['...', 'Cairns', -16.9203249,145.7305034],	
+			
+		//point number 25
+        ['...', 'Miami', 25.782324,-80.2310801],		
+
+		//point number 26
+        ['...', 'Phuket', 7.9665318,98.3599288],	
+		
+		//point number 27
+        ['...', 'Guilin', 25.2877098,110.2914047],	
+		
+		//point number 28
+        ['...', 'Palma', 39.573793,2.6406497],	
+		
+		//point number 29
+        ['...', 'Praha', 50.0596696,14.4656239],	
+		
+		//point number 30
+        ['...', 'Amsterdam', 52.3747158,4.8986142],	
+		
+		//point number 31
+        ['...', 'Dublin', 53.3243201,-6.245704],
+		
+		//point number 32
+        ['...', 'Copenhagen', 55.6712674,12.5608388],	
+		
+		//point number 33
+        ['...', 'Bruxelles', 50.8387,4.363405],		
+
+		//point number 34
+        ['...', 'Luxemburg', 49.6431555,6.2201155],	
+		
+		//point number 35
+        ['...', 'Sveden', 57.5928838,13.9408911],	
+		
+ 		//point number 35
+        ['...', 'Bern', 46.9546699,7.39487],	
+ 
+   		//point number 36
+        ['...', 'Berlin', 52.5075419,13.4251364],	      
     ];
 
 /*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
@@ -1088,7 +1193,8 @@ var map = new google.maps.Map(document.getElementById(id), {
     },
     streetViewControl:true,
     scaleControl:false,
-    zoom: 14,
+    zoom: 16,
+	minZoom: 3,
      styles:[
     {
         "featureType": "water",

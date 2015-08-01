@@ -624,7 +624,7 @@ hr {
 body#fullScreen {padding-top: 0}
 body#fullScreen #mainHeader{display:none;}
 #home{padding-top:44px;}
-#mapWrapper{ height:350px; }
+#mapWrapper{ height:600px; }
 
 #homeFullScreen {
 	background-image: url('../images/theme-pics/HK-ShatinPass.jpg');

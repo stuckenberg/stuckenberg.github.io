@@ -22,11 +22,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div id="portfolio-carousel" class="owl-carousel">
-                        <img src="images/portfolio/icois2013/slide1.PNG" alt="slides" class="img-responsive"/>
-                        <img src="images/portfolio/icois2013/slide2.PNG" alt="slides" class="img-responsive"/>
-                        <img src="images/portfolio/icois2013/slide3.PNG" alt="slides" class="img-responsive"/>
-						<img src="images/portfolio/icois2013/slide4.PNG" alt="slides" class="img-responsive"/>
+                    <div id="portfolio-carousel-flickr" class="owl-carousel">
+                        
                     </div>
                 </div>
             </div>
@@ -128,8 +125,35 @@
             {items : 1, navigation:true,navigationText:false}
             );
     }
-    
+     if($('#portfolio-carousel-flickr').length){ 
+        $("#portfolio-carousel-flickr").owlCarousel(
+            {
+			items: 3,
+			navigation:true,
+			navigationText:false,
+			jsonPath: 'https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=ba8c5191ee6ebb0a229a08da18f010a4&user_id=23511576@N08',
+			jsonSuccess: customDataSuccess
+			}
+            );
+			
+		function customDataSuccess(data){
+				 var content = "";
+				 for(var i in data["photo"]){
+       			 		 var farm = data["photo"][i].farm;
+       					 var server = data["photo"][i].server;
+						 var id = data["photo"][i].id;
+						 var secret = data["photo"][i].secret;
+						 var alt = data["photo"][i].title;
 
+						 content += "<img src=\"https://farm" +farm+ ".staticflickr.com/" +server+ "/" +id+ "_" +secret+ "_b.jpg\" alt=\"" +alt+ "\">"
+						 }
+				$("#portfolio-carousel-flickr").html(content);
+				}	
+    }   
+
+
+
+	
     /*
     |--------------------------------------------------------------------------
     | SHARRRE

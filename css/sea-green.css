@@ -276,7 +276,10 @@ li.filterTitle {
 section#projectDescription {
 	background-color:#F8F8F8
 }
-.mask{background-color: #43B6B1;}
+.mask{
+    background-color: #EEEEEE;
+    opacity: 0.8;
+}
 /* END PORTFOLIO
 ================================================== */
 
