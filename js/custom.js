@@ -277,7 +277,10 @@ $(document).ready(function() {
         $("#portfolio-carousel").owlCarousel();
     }
 
-
+	if($('#portfolio-carousel-flickr').length){ 
+     alert('toto');    
+        $("#portfolio-carousel-flickr").owlCarousel();		
+    }	
 	
     /*
     |--------------------------------------------------------------------------
