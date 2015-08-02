@@ -84,12 +84,12 @@
 			
 			function customDataSuccess(data){
 				 var content = "";
-				 for(var i in data["items"]){
-       			 		 var media = data["items"][i].media.m;
+				 for(var i in data.items){
+       			 		 var media = data.items[i].media.m;
        					 
-						 var alt = data["items"][i].title;
+						 var alt = data.items[i].title;
 
-						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\" class=\"img-responsive\"/>"
+						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\" class=\"img-responsive\">"
 						 }
 				$("#portfolio-carousel-flickr").html(content);
 				}		
