@@ -23,15 +23,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="portfolio-carousel" class="owl-carousel">
-                        <img src="http://farm8.staticflickr.com/7796/18088398508_b785c68883_c.jpg" alt="IMG_1351.jpg" class="img-responsive"/>
-						<img src="http://farm9.staticflickr.com/8572/15544178223_d946d0a7df_c.jpg" alt="IMG_0229" class="img-responsive"/>
-						<img src="http://farm4.staticflickr.com/3863/14354267009_e6a1e27d70_c.jpg" alt="IMG_60" class="img-responsive"/>
-												<img src="http://farm9.staticflickr.com/8572/15544178223_d946d0a7df_c.jpg" alt="IMG_0229" class="img-responsive"/>
-						<img src="http://farm4.staticflickr.com/3863/14354267009_e6a1e27d70_c.jpg" alt="IMG_60" class="img-responsive"/>
-												<img src="http://farm9.staticflickr.com/8572/15544178223_d946d0a7df_c.jpg" alt="IMG_0229" class="img-responsive"/>
-						<img src="http://farm4.staticflickr.com/3863/14354267009_e6a1e27d70_c.jpg" alt="IMG_60" class="img-responsive"/>
-												<img src="http://farm9.staticflickr.com/8572/15544178223_d946d0a7df_c.jpg" alt="IMG_0229" class="img-responsive"/>
-						<img src="http://farm4.staticflickr.com/3863/14354267009_e6a1e27d70_c.jpg" alt="IMG_60" class="img-responsive"/>
+
                     </div>
                 </div>
             </div>
@@ -81,13 +73,32 @@
     */
     if($('#portfolio-carousel').length){ 
         $("#portfolio-carousel").owlCarousel(
-            {items : 4, navigation:true,navigationText:false,lazyLoad : true}
+            {items : 4, 
+			navigation:true,
+			navigationText:false,
+			lazyLoad : true,
+			jsonPath: "http://api.flickr.com/services/feeds/photos_public.gne?id=23511576@N08&lang=en-us&format=json",
+			jsonSuccess: customDataSuccess
+			}
             );
+			
+			function customDataSuccess(data){
+				 var content = "";
+				 for(var i in data["items"]){
+       			 		 var media = data["items"][i].media.m;
+       					 
+						 var alt = data["items"][i].title;
+
+						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\" class=\"img-responsive\"/>"
+						 }
+				$("#portfolio-carousel-flickr").html(content);
+				}		
+			
     }
      if($('#portfolio-carousel-flickr').length){ 
         $("#portfolio-carousel-flickr").owlCarousel(
             {
-			items: 3,
+			items: 4,
 			navigation:true,
 			navigationText:false,
 			lazyLoad : true,
@@ -103,7 +114,7 @@
        					 
 						 var alt = data["items"][i].title;
 
-						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\">"
+						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\" class=\"img-responsive\"/>"
 						 }
 				$("#portfolio-carousel-flickr").html(content);
 				}	
