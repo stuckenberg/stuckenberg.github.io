@@ -327,7 +327,7 @@ $(document).ready(function() {
     $(document).ready(function() {
 
       $("#owl-demo").owlCarousel({
-        jsonPath : 'json/customData.json',
+        jsonPath : 'json/test.json',
         jsonSuccess : customDataSuccess
       });
 
@@ -335,8 +335,8 @@ $(document).ready(function() {
         var content = "";
         for(var i in data["items"]){
            
-           var img = data["items"][i].img;
-           var alt = data["items"][i].alt;
+           var img = data["items"][i].media.m;
+           var alt = data["items"][i].title;
 
            content += "<img src=\"" +img+ "\" alt=\"" +alt+ "\">"
         }
