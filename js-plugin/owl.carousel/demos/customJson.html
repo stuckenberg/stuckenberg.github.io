@@ -99,8 +99,8 @@ $(document).ready(function() {
     var content = "";
     for(var i in data["items"]){
        
-       var img = data["items"][i].img;
-       var alt = data["items"][i].alt;
+       var img = data["items"][i].media.m;
+       var alt = data["items"][i].title;
 
        content += "&lt;img src=\"" +img+ "\" alt=\"" +alt+ "\"&gt"
     }
