@@ -273,8 +273,15 @@ $(document).ready(function() {
     |--------------------------------------------------------------------------
     */
      if($('#portfolio-carousel').length){ 
-     alert('toto');    
+     alert('toto'); 
+	 			function customDataSuccess(data){
+				 var content = "<img src=\"http://farm8.staticflickr.com/7796/18088398508_b785c68883_c.jpg\" alt=\"IMG_1351.jpg\" class=\"img-responsive\"/>";
+
+				$("#portfolio-carousel").html(content);
+				}	
+	    
         $("#portfolio-carousel").owlCarousel();
+		
     }
 
 	if($('#portfolio-carousel-flickr').length){ 
