@@ -40,7 +40,7 @@
                     <h2>Location</h2>
                     <p>Hong Kongy</p>
 				    <h2>Date</h2>
-                    <p>June 14, 2015</p>
+                    <p>June 13, 2015</p>
                 </div>
                 <div class="col-md-4">
                     <div id="shareme" data-url="http://www.stuckenberg.de" data-text=""> </div>
@@ -82,7 +82,11 @@
 			}
             );
 			
-	
+			function customDataSuccess(data){
+				 var content = "<img src=\"http://farm8.staticflickr.com/7796/18088398508_b785c68883_c.jpg\" alt=\"IMG_1351.jpg\" class=\"img-responsive\"/>";
+
+				$("#portfolio-carousel").html(content);
+				}		
 			
     }
      if($('#portfolio-carousel-flickr').length){ 
@@ -92,7 +96,7 @@
 			navigation:true,
 			navigationText:false,
 			lazyLoad : true,
-			jsonPath: "http://api.flickr.com/services/feeds/photos_public.gne?id=23511576@N08&lang=en-us&format=json",
+			jsonPath: 'http://api.flickr.com/services/feeds/photos_public.gne?id=23511576@N08&tags=website,HongKong&format=json&jsoncallback=?',
 			jsonSuccess: customDataSuccess
 			}
             );
@@ -101,7 +105,7 @@
 				 var content = "";
 				 for(var i in data["items"]){
        			 		 var media = data["items"][i].media.m;
-       					 
+       					 media = media.replace("_m.jpg", '_b.jpg');
 						 var alt = data["items"][i].title;
 
 						 content += "<img src=\"" +media+ "\" alt=\"" +alt+ "\" class=\"img-responsive\"/>"
